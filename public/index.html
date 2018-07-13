@@ -7,6 +7,19 @@
 
 <body>
     <p>This is CHAT APP</p>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        let socket = io();
+
+        socket.on('connect', () => {
+            console.log('connected to Server')
+        })
+
+        socket.on('disconnect', () => {
+            console.log('Disconnected from server')
+        })
+    </script>
 </body>
 
 </html>
