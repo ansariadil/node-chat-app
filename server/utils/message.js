@@ -8,10 +8,20 @@ let generateMessage = (from, text) => {
     }
 }
 
-let generateLocationMessage = (from, latitude, longitude)=> {
+// let generateLocationMessage = (from, latitude, longitude)=> {
+//     return {
+//         from,
+//         url: `https://www.google.com/maps?q=${latitude},${longitude}`,
+//         createAt: moment().valueOf()
+//     }
+// }
+//New
+var generateLocationMessage = (from, latitude, longitude) => {
     return {
         from,
         url: `https://www.google.com/maps?q=${latitude},${longitude}`,
+        latitude,
+        longitude,
         createAt: moment().valueOf()
     }
 }
